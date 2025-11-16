@@ -1,0 +1,30 @@
+services:
+  honeypot:
+    build: ./honeypot/
+    ports:
+      - 80:80
+      - 21:21
+    volumes:
+      - logs:/var/logs/
+      - ftp_files:/var/files_ftp
+  dashboard:
+    build: ./dashboard/
+    volumes:
+      - logs:/var/logs/
+      - ftp_files:/var/files_ftp
+    networks:
+      dashnet:
+        ipv4_address: 172.20.0.10
+
+volumes:
+  logs:
+    driver: local
+  ftp_files:
+    driver: local
+
+networks:
+  dashnet:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16

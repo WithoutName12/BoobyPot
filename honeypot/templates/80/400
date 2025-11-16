@@ -1,0 +1,7 @@
+HTTP/1.1 400 Bad Request\r\n
+Content-Type: text/plain; charset=utf-8\r\n
+Content-Length: 11\r\n
+Connection: close\r\n
+\r\n
+Bad Request
+
