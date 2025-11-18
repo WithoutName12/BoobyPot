@@ -1,5 +1,4 @@
 # Booby Pot
-#### Video Demo:  <URL HERE>
 #### Description:
 > A simple production ftp/http honeypot, with SIEM-like dashboard web UI.
 ## Table of Contents
